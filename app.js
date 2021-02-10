@@ -237,7 +237,7 @@ function toggle9() {
       // Lose sounds
       laugh.play();
       Lose();
-    }, 700);
+    }, 800);
     count = 1;
   } else {
     pic.style.background = "red";
