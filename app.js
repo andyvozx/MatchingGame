@@ -10,6 +10,9 @@ function Start() {
   document.getElementById("7").style.background = "red";
   document.getElementById("8").style.background = "red";
   document.getElementById("9").style.background = "red";
+  document.getElementById("10").style.background = "red";
+  document.getElementById("11").style.background = "red";
+  document.getElementById("12").style.background = "red";
 }
 
 window.onload = function () {
