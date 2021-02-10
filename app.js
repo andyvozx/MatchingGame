@@ -74,6 +74,7 @@ function toggle4() {
   }
   console.log(count);
 }
+
 function toggle5() {
   let count = 0;
   let pic = document.getElementById("5");
@@ -86,11 +87,16 @@ function toggle5() {
   }
   console.log(count);
 }
+
 function toggle6() {
   let count = 0;
   let pic = document.getElementById("6");
   if (count === 0) {
     pic.style.background = "url('resources/pics/miguel.jpg')";
+    setTimeout(function () {
+      alert("You found Miguel. ICE is on the way!");
+      Start();
+    }, 500);
     count = 1;
   } else {
     pic.style.background = "red";
@@ -98,6 +104,7 @@ function toggle6() {
   }
   console.log(count);
 }
+
 function toggle7() {
   let count = 0;
   let pic = document.getElementById("7");
@@ -110,6 +117,7 @@ function toggle7() {
   }
   console.log(count);
 }
+
 function toggle8() {
   let count = 0;
   let pic = document.getElementById("8");
@@ -122,11 +130,16 @@ function toggle8() {
   }
   console.log(count);
 }
+
 function toggle9() {
   let count = 0;
   let pic = document.getElementById("9");
   if (count === 0) {
     pic.style.background = "url('resources/pics/miguel.jpg')";
+    setTimeout(function () {
+      alert("You found Miguel. ICE is on the way!");
+      Start();
+    }, 500);
     count = 1;
   } else {
     pic.style.background = "red";
