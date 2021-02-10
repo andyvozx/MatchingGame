@@ -13,6 +13,8 @@ function Start() {
   document.getElementById("10").style.background = "red";
   document.getElementById("11").style.background = "red";
   document.getElementById("12").style.background = "red";
+
+  document.getElementById("startButton").style.display = "none";
 }
 
 // total Score function
@@ -21,7 +23,12 @@ let totalScore = 0;
 
 function AddScore() {
   totalScore++;
-  document.getElementById("score").innerHTML = "Score " + "= " + totalScore;
+  document.getElementById("score").innerHTML = totalScore + " Miguel Caught";
+}
+
+function MedScore() {
+  if (totalScore > 1)
+    document.getElementById("score").innerHTML = totalScore + " Miguels Caught";
 }
 
 function HighScore() {
@@ -45,6 +52,7 @@ function HighScore() {
 function Win() {
   Start();
   AddScore();
+  MedScore();
   HighScore();
 
   // makes random number for changing pic position
@@ -159,9 +167,9 @@ function toggle7() {
       //Helicopter sounds
       let audio = new Audio("resources/sounds/heli.mp3");
       audio.play();
-      alert("You found Miguel. ICE is on the way!");
+      //alert("You found Miguel. ICE is on the way!");
       Win();
-    }, 500);
+    }, 700);
     count = 1;
   } else {
     pic.style.background = "red";
