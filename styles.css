@@ -1,6 +1,5 @@
 .header {
   text-align: center;
-
   margin-bottom: 10px;
   background: rgb(50, 191, 84);
   background: radial-gradient(
@@ -12,13 +11,15 @@
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 150px;
   color: red;
   font-family: "Fjalla One", sans-serif;
+  margin-bottom: 20px;
+  margin-top: 0px;
 }
 
 input {
-  font-size: 30px;
+  font-size: 80px;
   font-family: "Fjalla One", sans-serif;
 }
 
@@ -26,8 +27,9 @@ input {
   transition-duration: 0.4s;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 50%;
-  height: 50px;
-  margin-top: -100px;
+  height: 150px;
+  margin-top: 0px;
+  margin-bottom: 60px;
 }
 
 .button:hover {
@@ -48,6 +50,7 @@ input {
   justify-content: space-around;
   line-height: 30px;
 }
+
 .flex-item {
   background-image: url("resources/pics/miguel.jpg");
   margin: 5px;
