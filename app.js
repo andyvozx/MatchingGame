@@ -15,35 +15,73 @@ function Start() {
   document.getElementById("12").style.background = "red";
 }
 
-window.onload = function () {
-  let count = 0;
-  let pic1 = document.getElementById("1");
-  pic1.onclick = function click() {
-    if (count == 0) {
-      pic1.style.background = "url('resources/pics/andy.jpg')";
-      count = 1;
-    } else {
-      pic1.style.background = "red";
-      count = 0;
-    }
-    console.log(count);
-  };
-};
+// total Score function
+
+let totalScore = 0;
+
+function AddScore() {
+  totalScore++;
+  document.getElementById("score").innerHTML = "Score " + "= " + totalScore;
+}
+
+function HighScore() {
+  if (totalScore > 3) document.getElementById("score").style.color = "#FFD700";
+}
+// window.onload = function () {
+//   let count = 0;
+//   let pic1 = document.getElementById("1");
+//   pic1.onclick = function click() {
+//     if (count == 0) {
+//       pic1.style.background = "url('resources/pics/andy.jpg')";
+//       count = 1;
+//     } else {
+//       pic1.style.background = "red";
+//       count = 0;
+//     }
+//     console.log(count);
+//   };
+// };
 
 function Win() {
   Start();
-  document.getElementById("container3").style.flexDirection = "row-reverse";
-  let container1 = document.getElementById("container1");
-  let container2 = document.getElementById("container2");
-  let container3 = document.getElementById("container3");
+  AddScore();
+  HighScore();
 
-  let items = [container1, container2, container3];
-  for (let i = 0; i < items.length; i++) {
-    let target = Math.floor(Math.random() * items.length - 1) + 1;
+  // makes random number for changing pic position
+
+  function randomNum(maxLimit = 12) {
+    let randomNum = Math.random() * maxLimit;
+    return Math.floor(randomNum);
   }
+
+  document.getElementById("1").style.order = randomNum();
+  document.getElementById("2").style.order = randomNum();
+  document.getElementById("3").style.order = randomNum();
+  document.getElementById("4").style.order = randomNum();
+  document.getElementById("5").style.order = randomNum();
+  document.getElementById("6").style.order = randomNum();
+  document.getElementById("7").style.order = randomNum();
+  document.getElementById("8").style.order = randomNum();
+  document.getElementById("9").style.order = randomNum();
+  document.getElementById("10").style.order = randomNum();
+  document.getElementById("11").style.order = randomNum();
+  document.getElementById("12").style.order = randomNum();
 }
 
 // Toggle Pics
+
+function toggle1() {
+  let count = 0;
+  let pic = document.getElementById("1");
+  if (count === 0) {
+    pic.style.background = "url('resources/pics/andy.jpg')";
+    count = 1;
+  } else {
+    pic.style.background = "red";
+    count = 0;
+  }
+  console.log(count);
+}
 
 function toggle2() {
   let count = 0;
@@ -118,10 +156,8 @@ function toggle7() {
   if (count === 0) {
     pic.style.background = "url('resources/pics/miguel.jpg')";
     setTimeout(function () {
-      let audio = new Audio("resources/sounds/heli.mp3");
-
       //Helicopter sounds
-
+      let audio = new Audio("resources/sounds/heli.mp3");
       audio.play();
       alert("You found Miguel. ICE is on the way!");
       Win();

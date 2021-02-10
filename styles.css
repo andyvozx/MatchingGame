@@ -38,31 +38,38 @@ input {
 }
 
 .flex-container {
-  padding: 0;
-  margin: 0;
-  list-style: none;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row;
-  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
   line-height: 30px;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .flex-item {
   background-image: url("resources/pics/miguel.jpg");
   margin: 5px;
-  color: black;
-  font-weight: bold;
-  font-size: 1.5em;
-  text-align: center;
-  flex: 1 0 auto;
+  flex: 0 0 32%;
   height: auto;
 }
+
 .flex-item:before {
   content: "";
   float: left;
   padding-top: 100%;
+}
+
+h2 {
+  font-size: 70px;
+  color: black;
+  font-family: "Fjalla One", sans-serif;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
 }
