@@ -47,7 +47,12 @@ function SubScore() {
     document.getElementById("score").innerHTML =
       totalScore + " Miguel Captured";
   }
-  if (totalScore < 0) {
+  if (totalScore < -1) {
+    let negitiveScore = totalScore * -1;
+    document.getElementById("score").innerHTML =
+      negitiveScore + " Miguels Escaped";
+  }
+  if (totalScore === -1) {
     let negitiveScore = totalScore * -1;
     document.getElementById("score").innerHTML =
       negitiveScore + " Miguel Escaped";
