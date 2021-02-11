@@ -1,14 +1,19 @@
+html {
+  background-color: #cdffc7;
+}
+
 .header {
   text-align: center;
   margin-bottom: 10px;
   background: rgb(50, 191, 84);
-  background: radial-gradient(
-    circle,
+  background: linear-gradient(
+    90deg,
     rgba(50, 191, 84, 1) 0%,
-    rgba(255, 255, 255, 0.8853507705881626) 52%,
+    rgba(255, 255, 255, 0) 45%,
     rgba(212, 35, 7, 1) 100%
   );
   border-radius: 15px;
+  box-shadow: 7px 7px #5c5c5c;
 }
 
 h1 {
@@ -16,7 +21,8 @@ h1 {
   color: red;
   font-family: "Fjalla One", sans-serif;
   margin-bottom: 20px;
-  margin-top: 0px;
+  margin-top: 10px;
+  text-shadow: 7px 7px #5c5c5c;
 }
 
 input {
@@ -59,7 +65,7 @@ input {
   margin: 5px;
   flex: 0 0 32%;
   height: auto;
-  box-shadow: 7px 7px #8f8c8c;
+  box-shadow: 7px 7px #5c5c5c;
   border-radius: 15px;
 }
 
