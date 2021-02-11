@@ -30,7 +30,7 @@ let totalScore = 0;
 function AddScore() {
   totalScore++;
   document.getElementById("score").innerHTML = totalScore + " Miguel Captured";
-
+  document.getElementById("score").style.color = "black";
   if (totalScore < 0) {
     let negitiveScore = totalScore * -1;
     document.getElementById("score").innerHTML =
